@@ -10,9 +10,6 @@ def mainpage(request):
     blogs = Blog.objects.all()
     return render(request, 'main/mainpage.html', {'blogs':blogs})
 
-def secondpage(request):
-    return render(request, 'main/secondpage.html')
-
 def create(request):
     new_blog = Blog()
     new_blog.title = request.POST['title']
